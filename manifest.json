@@ -1,0 +1,46 @@
+{
+    "manifest_version": 2,
+    "name": "Duplicate To Adjacent",
+    "version": "1.0.0",
+
+    "description": "Duplicates the current tab on a new adjacent tab",
+    "icons": {
+        "16": "images/icon.png",
+        "32": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "16": "images/icon.png",
+            "32": "images/icon.png",
+            "48": "images/icon.png",
+            "128": "images/icon.png"
+        },
+        "default_popup": "popup.html"
+    },
+
+    "author": "RazKev",
+    "homepage_url": "https://github.com/RazKev/DuplicateToAdjacent",
+    "offline_enabled": true,
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "commands": {
+        "duplicate-tab": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+U",
+                "mac": "Command+Shift+U"
+            },
+            "description":"Duplicate current tab"
+        }
+    },
+    "permissions": [
+        "contextMenus",
+        "activeTab"
+    ]
+}
